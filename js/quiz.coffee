@@ -66,7 +66,7 @@ quizController = ($scope) ->
       questions: [
         {text: "Does your organization use anti-virus software?"}
         {text: "Do your IT professionals do quarterly maintenance of all PCs?"}
-        {text: "In quarterly maintenance, are PCs (computer, monitor, keyboard) physically cleaned?"}
+        {text: "Does management have access to quarterly maintenance logs?"}
         {text: "In quarterly maintenance, are PCs (computer, monitor, keyboard) physically cleaned?"}
       ]
     }
