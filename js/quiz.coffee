@@ -77,6 +77,7 @@ quizController = ($scope) ->
         {text: "Is the Internet Use Policy enforced?"}
         {text: "Do your IT professionals maintain a Disaster Plan?"}
         {text: "Does your company have a policy on using personal devices for work?"}
+        {text: "Is that policy enforced?"}
       ]
     }
     {
