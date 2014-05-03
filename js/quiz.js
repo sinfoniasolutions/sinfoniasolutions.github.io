@@ -10,7 +10,7 @@
         name: "The IT Department",
         questions: [
           {
-            text: "Are there two or more people on your IT support staff?"
+            text: "Do you have two or more IT professionals?"
           }, {
             text: "Do your IT professionals work well together?"
           }, {

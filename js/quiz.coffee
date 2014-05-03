@@ -5,7 +5,7 @@ quizController = ($scope) ->
     {
       name: "The IT Department"
       questions: [
-        {text: "Are there two or more people on your IT support staff?"}
+        {text: "Do you have two or more IT professionals?"}
         {text: "Do your IT professionals work well together?"}
         {text: "Is your head IT professional cool-headed and calm, especially under pressure?"}
         {text: "Do your IT professionals work remotely less than 20% of the time?"}
