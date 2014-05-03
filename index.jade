@@ -1,32 +1,36 @@
 | ---
 | layout: default
-| title: Sinfonia Solutions - IT Consulting and Web Development
+| title: Sinfonia Solutions - IT Consulting
 | ---
 | &nbsp
 
 .container
-  .jumbotron
+  .jumbotron.people
     h4 The Sinfonia Solutions Philosophy:
     h1 People Matter.
     p Serving people is more important than serving computers. Get in on the biggest secret in IT Management.
     p: a.btn.btn-primary.btn-lg(role="button") Learn more
   .row
     .col-sm-4
-      h3 Does Your IT Support Stack Up ?
-      p Take the quiz and find out.
-      p: a.btn.btn-primary(href="/quiz.html", role="button") Take the Quiz
+      .top-thick-border.light-green-top
+        h3 Does Your IT Support Stack Up?
+        p Take the quiz and find out.
+        p: a.btn.btn-primary(href="/quiz.html", role="button") Take the Quiz
     .col-sm-4
-      h3 Hire Sinfonia Solutions
-      p Get IT services for a flat monthly fee or a percentage of gross.
-      p: a.btn.btn-primary(role="button") Our Pricing
+      .top-thick-border.light-red-top
+        h3 Hire Sinfonia Solutions
+        p Get IT services for a flat monthly fee or a percentage of gross.
+        p: a.btn.btn-primary(role="button") Our Pricing
     .col-sm-4
-      h3 Get the Book
-      p Read an excerpt from <em>People Matter</em>.
-      p: a.btn.btn-primary(role="button") The Book
-  //.row
-  //  .col-xs-12
-  //    h3 Latest Blog Posts
-  //    ul
-  //      | {% for post in site.posts %}
-  //      li: a(href="{{ post.url }}") {{ post.title }}
-  //      | {% endfor %}
+      .top-thick-border.light-purple-top
+        h3 Get the Book
+        p Read an excerpt from <em>People Matter</em>.
+        p: a.btn.btn-primary(role="button") The Book
+  .row
+    .col-xs-12
+      .top-thick-border
+        h3 Latest Blog Posts
+        ul
+          | {% for post in site.posts %}
+          li: a(href="{{ post.url }}") {{ post.title }}
+          | {% endfor %}

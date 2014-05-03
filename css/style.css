@@ -1,0 +1,18 @@
+.jumbotron.people {
+  background-image: url("/img/people.jpg");
+}
+.top-thick-border {
+  border-top: 3px solid #000;
+}
+.light-purple-top {
+  background: linear-gradient(to bottom, #b1b2d7 0%, rgba(183,184,218,0) 8%, rgba(255,255,255,0) 100%);
+}
+.light-red-top {
+  background: linear-gradient(to bottom, #ee6269 0%, rgba(239,111,117,0) 8%, rgba(255,255,255,0) 100%);
+}
+.light-green-top {
+  background: linear-gradient(to bottom, #86d05d 0%, rgba(144,212,106,0) 8%, rgba(255,255,255,0) 100%);
+}
+.padding-top {
+  padding-top: 0.5em;
+}

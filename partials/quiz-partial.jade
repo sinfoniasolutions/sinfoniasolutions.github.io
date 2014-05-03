@@ -3,7 +3,7 @@
     .col-xs-12.col-sm-6.col-sm-offset-3
       form
         .category(ng-repeat="category in categories")
-          h3 {{ category.name }}
+          h3.top-thick-border.light-purple-top.padding-top {{ category.name }}
           .question.form-group(ng-repeat="question in category.questions")
             label {{ question.text }}
             select.form-control(ng-model="question.response", ng-options="response.text for response in responses",

@@ -16,9 +16,7 @@
           }, {
             text: "Is the head of your IT department cool-headed and calm, especially under pressure?"
           }, {
-            text: "Does your IT department work remotely 20% of the time or less?"
-          }, {
-            text: "Is there at least one person in your IT department who is almost never interrupted by new issues?"
+            text: "Does your IT department work remotely less than 20% of the time?"
           }, {
             text: "Do your IT professionals take breaks during the day?"
           }, {
@@ -60,7 +58,7 @@
           {
             text: "When new issues arise, are they recorded quickly, without interrupting a user very much?"
           }, {
-            text: "Are issues that require use of a users computer worked on only when that user is absent?"
+            text: "Are issues that require use of a user's computer worked on only when that user is absent?"
           }, {
             text: "Are issues worked on in priority order?"
           }, {
