@@ -1,6 +1,23 @@
 quiz = angular.module "quiz", ['ngRoute']
 
-quizController = ($scope) ->
+quizController = ($scope, $location) ->
+#  $scope.groups = [
+#    {
+#      name: "The Essentials"
+#      questions: [
+#        {text: "Do your IT professionals work well together?"}
+#        {text: "Do your IT professionals do daily rounds?"}
+#        {text: "Are your IT professionals courteous?"}
+#        {text: "Is somebody available from 9 to 5, every business day?"}
+#        {text: "Can management easily see a list of open issues?"}
+#        {text: "Does every project come with a business case?"}
+#        {text: "Does your organization use some form of organized networked storage?"}
+#        {text: "Do your IT professionals do quarterly maintenance of all PCs?"}
+#        {text: "When old computers are retired, do your IT professionals wipe all company data from them?"}
+#        {text: "Do your IT professionals have programming experience?"}
+#      ]
+#    }
+#  ]
   $scope.categories = [
     {
       name: "The IT Department"
@@ -112,16 +129,26 @@ quizController = ($scope) ->
   $scope.gradeQuiz = () ->
     points = 0
     maxPoints = 0
-    for category in $scope.categories
-      for question in category.questions
+    for group in $scope.groups
+      for question in group.questions
         points += question.response?.points or 0
         maxPoints += question.response?.maxPoints or 0
     $scope.currentGrade = "#{points}/#{maxPoints}"
+    if $scope.quizForm.$valid
+      $location.path("/results/#{points}/#{maxPoints}")
+
+resultsController = ($scope, $routeParams) ->
+  $scope.grade = "" + $routeParams.points + " / " + $routeParams.maxPoints
 
 quiz.config ($routeProvider) ->
-  $routeProvider.when('/quiz',
+  $routeProvider.when(
+    '/quiz',
     templateUrl: '/partials/quiz-partial.html',
     controller: quizController,
+  ).when(
+    '/results/:points/:maxPoints',
+    templateUrl: '/partials/results.html'
+    controller: resultsController,
   ).otherwise(
     redirectTo: "/quiz"
   )
