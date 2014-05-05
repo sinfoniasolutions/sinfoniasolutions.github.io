@@ -1,15 +1,30 @@
 | ---
 | layout: default
-| title: Flat Rate IT Support and Consulting
+| title: Flat Rate IT Support
 | ---
-| &nbsp
+| {% raw  %}
 
-.container
-  .row
+script(src="/js/flat-pricing.js")
+.container(ng-app="flatPricing")
+  .row(ng-controller="flatPricingController")
     .col-sm-8
-      h1 Flat Rate IT Support
-      h2 Our Prices
-
+      h1.text-center Flat Rate IT Support
+      h3.text-center Find the rate that you'll pay after your free first 30 days.
+      form.form-horizontal(role="form", name="flatRateForm")
+        .form-group
+          label.col-sm-9.control-label Number of computers to be supported (minus servers):
+          .col-sm-3
+            input.form-control(type="number", ng-model="computers", required)
+      .row.top-thick-border
+        .col-xs-9
+          h3.pull-right {{computers}} computers at ${{baseRate}} each:
+        .col-xs-3
+          h3 ${{computers*baseRate}}
+      .row.top-thick-border
+        .col-xs-9
+          h3.pull-right Monthly Total:
+        .col-xs-3
+          h3 ${{computers*totalRate}}
     .col-sm-4
       .top-thick-border
         .light-red-top
@@ -18,3 +33,16 @@
           p If your goals aren't being met, we know that you'll choose somebody else for your IT services.
           p Want some concrete examples?
             a  We produce an <em>extremely</em> large set of work products that your business can use.
+      .top-thick-border
+        .light-green-top
+          h3: em Are There Any Other Fees?
+          p Nope. Just the monthly total you see here.
+      .top-thick-border
+        .light-purple-top
+          h3: em The First 30 Days are Free?
+          p.
+            Yes. We want to get to know each other before we commit to a service contract.
+            We're confident you'll like us!
+          p After the first 30 days, either party can cancel the contract with 60 days notice.
+
+  |{% endraw %}
