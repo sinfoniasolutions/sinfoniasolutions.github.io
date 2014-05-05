@@ -4,9 +4,10 @@
       h1 The IT Quiz
       p A food-for-thought quiz about how well your IT support works.
       form(name="quizForm")
-        .category(ng-repeat="group in categories")
-          h3.top-thick-border.light-purple-top.padding-top {{ group.name }}
-          .question.form-group(ng-repeat="question in group.questions")
-            label {{ question.text }}
-            select.form-control(ng-model="question.response", ng-options="response.text for response in responses",
+        .category.top-thick-border(ng-repeat="group in categories")
+          .light-purple-top
+            h3.padding-top {{ group.name }}
+            .question.form-group(ng-repeat="question in group.questions")
+              label {{ question.text }}
+              select.form-control(ng-model="question.response", ng-options="response.text for response in responses",
                                 required, ng-change="gradeQuiz()")
