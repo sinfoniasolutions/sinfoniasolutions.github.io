@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "flat-pricing.js",
+  "sourceRoot": "",
+  "sources": [
+    "flat-pricing.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,WAAA;;AAAA,EAAA,WAAA,GAAc,OAAO,CAAC,MAAR,CAAe,aAAf,EAA8B,EAA9B,CAAd,CAAA;;AAAA,EAEA,WAAW,CAAC,UAAZ,CAAuB,uBAAvB,EAAgD,SAAC,MAAD,GAAA;AAC9C,IAAA,MAAM,CAAC,SAAP,GAAmB,CAAnB,CAAA;AAAA,IACA,MAAM,CAAC,QAAP,GAAkB,GADlB,CAAA;WAEA,MAAM,CAAC,SAAP,GAAmB,MAAM,CAAC,SAHoB;EAAA,CAAhD,CAFA,CAAA;AAAA"
+}
