@@ -1,0 +1,23 @@
+| ---
+| layout: default
+| ---
+| &nbsp
+
+.container.blog-container
+  h3.less-space-top The Sinfonia Solutions Blog
+  .jumbotron.circuit
+    p: em {{ page.date | date_to_string }}
+    h1 {{page.title}}
+  .row
+    .col-sm-8.post-content
+      |{{ content }}
+    .col-sm-4
+      h3 Recent Posts
+      | {% for post in site.posts limit:8 %}
+      .top-thick-border
+        p {{post.date | date_to_long_string}}
+        h4.less-space-top {{ post.title }}
+        p {{ post.description }}
+        a(href="{{ post.url }}") Read More
+        .spacer-s
+      | {% endfor %}
