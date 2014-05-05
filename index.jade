@@ -5,12 +5,9 @@
 | &nbsp
 
 .container
-  .jumbotron.people
-    h4 The Sinfonia Solutions Philosophy:
-    h1 People Matter.
-    p Serving people is more important than serving computers.
-      strong  Get in on the biggest secret in IT Management.
-    p: a.btn.btn-primary.btn-lg(href="/philosophy.html", role="button") Learn more
+  .jumbotron.happy
+    h1.text-center People > Computers
+    h2.text-center Get in on the biggest secret in IT Administration.
   .row
     .col-sm-4
       .top-thick-border
@@ -32,9 +29,14 @@
           p: a.btn.btn-primary(href="/book.html", role="button") The Book
   .row
     .col-xs-12
+      h2 Latest Blog Posts:
+  .row
+    | {% for post in site.posts limit:8 %}
+    .col-sm-3.col-xs-6
       .top-thick-border
-        h3 Latest Blog Posts
-        ul
-          | {% for post in site.posts %}
-          li: a(href="{{ post.url }}") {{ post.title }}
-          | {% endfor %}
+        p {{post.date | date_to_long_string}}
+        h4.less-space-top {{ post.title }}
+        p {{ post.description }}
+        a(href="{{ post.url }}") Read More
+        .spacer-s
+    | {% endfor %}
