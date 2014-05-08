@@ -2,12 +2,10 @@
 (function() {
   var flatPricing;
 
-  flatPricing = angular.module("flatPricing", []);
+  flatPricing = angular.module("flatPricing", ["ngAnimate", "slide"]);
 
   flatPricing.controller("flatPricingController", function($scope) {
-    $scope.computers = 1;
-    $scope.baseRate = 100;
-    return $scope.totalRate = $scope.baseRate;
+    return $scope.show = {};
   });
 
 }).call(this);

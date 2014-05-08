@@ -1,6 +1,4 @@
-flatPricing = angular.module("flatPricing", [])
+flatPricing = angular.module("flatPricing", ["ngAnimate", "slide"])
 
 flatPricing.controller "flatPricingController", ($scope) ->
-  $scope.computers = 1
-  $scope.baseRate = 100
-  $scope.totalRate = $scope.baseRate
+  $scope.show = {}

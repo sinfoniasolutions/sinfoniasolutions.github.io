@@ -4,49 +4,54 @@
 | ---
 | &nbsp
 
-.container
+script(src="/js/flat-pricing.js")
+.container(ng-app="flatPricing", ng-controller="flatPricingController")
   .jumbotron.happy
     h1.text-center Want more from your IT dollars?
     h2.text-center You've come to the right place.
-    h3.text-center Currently Accepting Contracts in the United States and Canada.
+    h3.text-center Currently accepting contracts in the United States and Canada.
+  p.text-center: a(href="/pricing/quote.html") I'm just here for a quote.
   .row
-    .col-xs-12.col-sm-4
+    .col-xs-12.col-md-8.col-md-offset-2
       .top-thick-border
         .light-purple-top
           h2 Flat Rate Pricing
           h3 End expensive IT surprises with Sinfonia Solutions.
-          p.
-            With our flat rate plan, you get great IT support for a flat rate. That flat rate is our only fee.
-          p.
+          p.slightly-larger-text.
+            With our flat rate plan, you get great IT support at a fixed cost. It's that simple.
+          p.slightly-larger-text.
             You won't have to leave issues unfixed because it's the end of the month and your IT professional is
             "out of hours." With Sinfonia Solutions, <em>you never run out of hours.</em>
-          p.
-            On top of that, our flat rate is significantly lower than the average cost of IT services.
-    .col-xs-12.col-sm-8
+  .row
+    .col-xs-12.col-md-8.col-md-offset-2
       .top-thick-border
         .light-green-top
           h2 Big Savings
-          h3 An organization of 50 computers saves $1575 <em>per month</em>.
-          h3 An organization of 200 computers saves <strong>$6300 per month</strong>.
-          h5 Breakdown:
-          h5 The average Computer Support Specialist earns $4075 a month.&nbsp
-            a(href="http://www.bls.gov/ooh/computer-and-information-technology/computer-support-specialists.htm") (source)
-          h5 That specialist can support about 50 computers.
-          h5 That's $81.50 per computer per month.
-          h5 We charge $50 per computer per month.
+          h3 An organization of 200 computers saves <strong>$4300 per month</strong>.
+          a(ng-click="show.savingsDetail = true") more
+          .slide(ng-show="show.savingsDetail")
+            h5 Breakdown:
+            h5 The average Computer Support Specialist earns $4075 a month.&nbsp
+              a(href="http://www.bls.gov/ooh/computer-and-information-technology/computer-support-specialists.htm") (source)
+            h5 That specialist can support about 50 computers.
+            h5 That's $81.50 per computer per month.
+            h5 We charge $60 per computer per month.
+            h5 That's a savings of $21.50 per computer per month.
   .row
-    .col-xs-12.col-sm-4
+    .col-xs-12.col-md-8.col-md-offset-2
       .top-thick-border
         .light-purple-top
           h2 People Over Computers
-          p.
+          p.slightly-larger-text.
             As a whole, the IT industry is focused too much on what works for computers. We've forgotten that we exist
             <strong>to serve people.</strong>
-          p.
-            People are the movers and the shakers in every organization. People drive business goals. <em>People do the
-            work that pays our salary.</em>
-          p: a(href="/book.html") Read more about our philosophy in our book, <em>People Matter</em>.
-    .col-xs-12.col-sm-8
+          p.slightly-larger-text.
+            The users we support are the ones who allow us to have marvelous IT jobs. When we lose that perspective, we
+            don't do our best. You deserve our best.
+          p.slightly-larger-text Read more about our philosophy in our book,&nbsp
+            a(href="/book.html") People Matter.
+  .row
+    .col-xs-12.col-md-8.col-md-offset-2
       .top-thick-border
         .light-red-top
           h2 The Sinfonia Solutions Difference
@@ -72,24 +77,27 @@
               ul
                 li use computers only when their users are absent?
                 li prefer to communicate in-person?
+          h4 If you answered "no" to any of these questions, your IT support has room to improve.
           h4 Learn more about the Sinfonia Solutions Difference by&nbsp
             a(href="/quiz.html") taking our quiz.
   .row
-    .col-xs-12
+    .col-xs-12.col-md-8.col-md-offset-2
       .top-thick-border
         .light-green-top
           h2 Already have an IT department?
           h3 We can integrate with your existing IT support, or consult on specific issues.
-          p That brings our already low flat rate down from $50 per computer to <strong>$25 or less.</strong>
-  .jumbotron
-    h1.text-center Don't Believe the Hype?
-    h2.text-center Have a month on us.
-    p.text-center We'll give you 30 days of awesome IT support at no charge.
-    p.text-center There's no obligation - just our best attempt to get you hooked.
-    p.text-center
-      a.btn.btn-primary.btn-lg(href="/pricing/quote.html", role="button") Gimme a Quote
-      | &nbsp or &nbsp
-      a.btn.btn-primary.btn-lg(href="/contact-us.html", role="button") Take Me to Your Leader
+          p.slightly-larger-text That brings our already low flat rate down to <strong>$25 or less.</strong>
+  .row
+    .col-xs-12.col-md-8.col-md-offset-2
+      .jumbotron
+        h1.text-center Don't trust the hype?
+        h2.text-center Have a month on us.
+        p.text-center We'll give you 30 days of awesome IT support at no charge.
+        p.text-center There's no obligation - just our best attempt to get you hooked.
+        p.text-center
+          a.btn.btn-primary.btn-lg(href="/pricing/quote.html", role="button") Gimme a Quote
+          | &nbsp or &nbsp
+          a.btn.btn-primary.btn-lg(href="/contact-us.html", role="button") Take Me to Your Leader
 
 
 
