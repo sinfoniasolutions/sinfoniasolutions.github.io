@@ -43,3 +43,13 @@
 .larger-text {
   font-size: 1.4em;
 }
+.slightly-larger-text {
+  font-size: 1.2em;
+}
+.zero-margin-padding {
+  padding: 0;
+  margin: 0;
+}
+.small-margin-bottom {
+  margin-bottom: 5px;
+}

@@ -4,47 +4,63 @@
 | ---
 | {% raw  %}
 
-script(src="/js/flat-pricing.js")
-.container(ng-app="flatPricing")
-  .row(ng-controller="flatPricingController")
-    .col-sm-8
+script(src="/js/quote.js")
+.container(ng-app="quote")
+  .row(ng-controller="quoteController")
+    .col-md-8
       h1.text-center Flat Rate IT Support
       h3.text-center Find the rate that you'll pay after your free first 30 days.
       form.form-horizontal(role="form", name="flatRateForm")
         .form-group
-          label.col-sm-9.control-label Number of computers to be supported (minus servers):
-          .col-sm-3
+          label.col-sm-8.control-label Number of computers to be supported (minus servers):
+          .col-sm-4
             input.form-control(type="number", ng-model="computers", required)
-      .row.top-thick-border
-        .col-xs-9
-          h3.pull-right {{computers}} computers at ${{baseRate}} each:
-        .col-xs-3
-          h3 ${{computers*baseRate}}
-      .row.top-thick-border
-        .col-xs-9
-          h3.pull-right Monthly Total:
-        .col-xs-3
-          h3 ${{computers*totalRate}}
-      h4.text-center Like this quote? Let's talk. cseebach@sinfoniasolutions.com
-    .col-sm-4
+        .form-group
+          label.col-sm-8.control-label Service provided:
+          .col-sm-4
+            select.form-control(ng-model="role", required, ng-options="role.name for role in roles")
+      .top-thick-border
+        .row
+          .col-xs-8
+            h3.pull-right {{computers}} computers at ${{role.baseRate}} each:
+          .col-xs-4
+            h3 ${{computers*role.baseRate}}
+      .top-thick-border
+        .row
+          .col-xs-8
+            h3.pull-right Monthly Total:
+          .col-xs-4
+            h3 ${{computers*role.baseRate}}
+      h4.text-center Like this quote? Have questions?
+      p.text-center: a.btn.btn-primary.btn-lg(ng-click="showContact = true", role="button") Take Me to Your Leader
+      div(ng-show="showContact")
+        h4.text-center Send us a message below, or email us.
+        h4.text-center: a(href="mailto:cseebach@sinfoniasolutions.com") cseebach@sinfoniasolutions.com
+        a(id="foxyform_embed_link_552908", href="http://www.foxyform.com/") foxyform
+        script.
+          (function(d, t){
+          var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+          g.src = "http://www.foxyform.com/js.php?id=552908&sec_hash=36956c2f69e&width=100%";
+          s.parentNode.insertBefore(g, s);
+          }(document, "script"));
+    .col-md-4
       .spacer-s
       .top-thick-border
-        .light-red-top
-          h3: em What Does a Flat Rate Get Me?
-          p The flat rate doesn't limit the number of hours we work - instead, we work to meet your goals.
-          p If your goals aren't being met, we know that you'll choose somebody else for your IT services.
-          p Want some concrete examples?
-            a  We produce an <em>extremely</em> large set of work products that your business can use.
-      .top-thick-border
         .light-green-top
-          h3: em Are There Any Other Fees?
-          p Nope. Just the monthly total you see here.
-      .top-thick-border
-        .light-purple-top
           h3: em The First 30 Days are Free?
           p.
             Yes. We want to get to know each other before we commit to a service contract.
             We're confident you'll like us!
-          p After the first 30 days, either party can cancel the contract with 60 days notice.
+      .top-thick-border
+        .light-purple-top
+          h3: em What are other important terms of your service contracts?
+          p Payments are to be made monthly.
+          p Either party can terminate the contract with 90 days prior notice.
+          p.
+            Sinfonia Solutions provides a 95% business-hours uptime guarantee, with a $150 credit per point of non-performance.
+          p.
+            For example, if systems are only available during 93% of your business hours in a month, a $300 credit
+            is applied to your bill.
 
 |{% endraw %}

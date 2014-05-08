@@ -4,13 +4,13 @@
 | ---
 | &nbsp
 
-script(src="/js/flat-pricing.js")
+script(src="/js/flat.js")
 .container(ng-app="flatPricing", ng-controller="flatPricingController")
-  .jumbotron.happy
+  .jumbotron.happy.small-margin-bottom
     h1.text-center Want more from your IT dollars?
     h2.text-center You've come to the right place.
     h3.text-center Currently accepting contracts in the United States and Canada.
-  p.text-center: a(href="/pricing/quote.html") I'm just here for a quote.
+  p.text-center.zero-margin-padding: a(href="/pricing/quote.html") I'm just here for a quote.
   .row
     .col-xs-12.col-md-8.col-md-offset-2
       .top-thick-border
@@ -86,7 +86,7 @@ script(src="/js/flat-pricing.js")
         .light-green-top
           h2 Already have an IT department?
           h3 We can integrate with your existing IT support, or consult on specific issues.
-          p.slightly-larger-text That brings our already low flat rate down to <strong>$25 or less.</strong>
+          p.slightly-larger-text That brings our already low flat rate down to <strong>$30 or less.</strong>
   .row
     .col-xs-12.col-md-8.col-md-offset-2
       .jumbotron
@@ -95,9 +95,21 @@ script(src="/js/flat-pricing.js")
         p.text-center We'll give you 30 days of awesome IT support at no charge.
         p.text-center There's no obligation - just our best attempt to get you hooked.
         p.text-center
-          a.btn.btn-primary.btn-lg(href="/pricing/quote.html", role="button") Gimme a Quote
+          a.btn.btn-primary.btn-lg(href="/pricing/quote.html", role="button") Get a Quote
           | &nbsp or &nbsp
-          a.btn.btn-primary.btn-lg(href="/contact-us.html", role="button") Take Me to Your Leader
+          a.btn.btn-primary.btn-lg(ng-click="showContact()", role="button") Take Me to Your Leader
+  .row
+    .col-md-8.col-md-offset-2(ng-show="show.contact")
+      h4.text-center Send us a message below, or email us.
+      h4.text-center: a(href="mailto:cseebach@sinfoniasolutions.com") cseebach@sinfoniasolutions.com
+      a(id="foxyform_embed_link_552908", href="http://www.foxyform.com/") foxyform
+      script.
+        (function(d, t){
+        var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+        g.src = "http://www.foxyform.com/js.php?id=552908&sec_hash=36956c2f69e&width=100%";
+        s.parentNode.insertBefore(g, s);
+        }(document, "script"));
 
 
 
