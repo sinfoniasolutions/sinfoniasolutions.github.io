@@ -1,6 +1,6 @@
 | ---
 | layout: default
-| title: Flat Rate IT Support
+| title: Flat Rate IT Support - Online Quote
 | ---
 | {% raw  %}
 
@@ -8,7 +8,7 @@ script(src="/js/quote.js")
 .container(ng-app="quote")
   .row(ng-controller="quoteController")
     .col-md-8
-      h1.text-center Flat Rate IT Support
+      h1.text-center Flat Rate IT Support - Online Quote
       h3.text-center Find the rate that you'll pay after your free first 30 days.
       form.form-horizontal(role="form", name="flatRateForm")
         .form-group
@@ -46,6 +46,10 @@ script(src="/js/quote.js")
           }(document, "script"));
     .col-md-4
       .spacer-s
+      .top-thick-border
+        .light-red-top
+          h3: em Where can I get more information about your services?
+          p: a(href="/pricing/flat.html") Head to our Flat Rate page.
       .top-thick-border
         .light-green-top
           h3: em The First 30 Days are Free?
